@@ -3,65 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kegiatan - Campus Life</title>
+  <title>Menu CHAGEE - CHAGEE Indonesia</title>
 </head>
 <body>
   <header>
-    <h1>Campus Life</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="content.html">Kegiatan</a>
-      <a href="contact.html">Kontak</a>
+    <a href="index.html"><img src="images/logo-chagee.svg" alt="CHAGEE Indonesia - kembali ke Beranda" width="160" height="40"></a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="content.html" aria-current="page">Menu</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
     </nav>
+    <form action="content.html" method="get" role="search">
+      <label for="cari">Cari menu</label>
+      <input type="search" id="cari" name="q" placeholder="Cari menu...">
+      <button type="submit">Cari</button>
+    </form>
+    <div role="group" aria-label="Pilihan bahasa">
+      <button type="button" lang="id" aria-pressed="true">ID</button>
+      <button type="button" lang="en" aria-pressed="false">EN</button>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Daftar Kegiatan Kampus</h2>
-      <p>Pilih kegiatan yang sesuai dengan minat dan jadwalmu.</p>
-    </section>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Menu</li>
+      </ol>
+    </nav>
 
-    <section>
-      <h2>Kegiatan Akademik</h2>
-      <article>
-        <h3>Seminar Teknologi 2026</h3>
-        <img src="images/seminar.svg" alt="Ilustrasi seminar di kampus Institut Teknologi PLN (ITPLN)" width="400">
-        <p>Seminar tentang tren teknologi terbaru bersama praktisi industri dan dosen tamu.</p>
-        <a href="detail.html">Lihat detail</a>
-      </article>
-    </section>
+    <h1>Menu CHAGEE</h1>
+    <p>Jelajahi varian teh berdasarkan kategori.</p>
 
-    <section>
-      <h2>Kegiatan Non-Akademik</h2>
-      <article>
-        <h3>Turnamen Olahraga Antar Fakultas</h3>
-        <img src="images/olahraga.svg" alt="Ilustrasi lapangan olahraga kampus ITPLN" width="400">
-        <p>Kompetisi futsal, basket, dan bulu tangkis yang diikuti seluruh fakultas.</p>
-        <a href="detail.html">Lihat detail</a>
-      </article>
-
-      <article>
-        <h3>Festival Musik Kampus</h3>
-        <img src="images/musik.svg" alt="Ilustrasi panggung musik kampus ITPLN" width="400">
-        <p>Penampilan band dan solois mahasiswa dalam satu panggung besar.</p>
-        <a href="detail.html">Lihat detail</a>
-      </article>
-    </section>
-
-    <section>
-      <h2>Ringkasan Jadwal</h2>
+    <nav aria-label="Kategori menu">
       <ul>
-        <li>Seminar Teknologi: 15 November 2026</li>
-        <li>Turnamen Olahraga: 22 November 2026</li>
-        <li>Festival Musik: 29 November 2026</li>
+        <li><a href="content.html">Semua</a></li>
+        <li><a href="#fresh-milk-tea">Fresh Milk Tea</a></li>
+        <li><a href="#snow-cap-milk-tea">Snow Cap Milk Tea</a></li>
+        <li><a href="#teaspresso-frappe-latte">Teaspresso Frappé &amp; Latte</a></li>
+        <li><a href="#brewed-tea">Brewed Tea</a></li>
       </ul>
-      <p><a href="index.html">Kembali ke Home</a></p>
+    </nav>
+
+    <section id="fresh-milk-tea" aria-labelledby="h-fresh-milk-tea">
+      <h2 id="h-fresh-milk-tea">Fresh Milk Tea</h2>
+      <ul>
+        <li>
+          <article>
+            <img src="images/produk-1.svg" alt="Foto Jasmine Green Milk Tea" width="300" height="200">
+            <h3>Jasmine Green</h3>
+            <p>Fresh Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Jasmine Green Milk Tea</span></a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/produk-2.svg" alt="Foto Da Hong Pao Milk Tea" width="300" height="200">
+            <h3>Da Hong Pao</h3>
+            <p>Fresh Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Da Hong Pao Milk Tea</span></a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/produk-3.svg" alt="Foto Tie Guan Yin Milk Tea" width="300" height="200">
+            <h3>Tie Guan Yin</h3>
+            <p>Fresh Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Tie Guan Yin Milk Tea</span></a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section id="snow-cap-milk-tea" aria-labelledby="h-snow-cap-milk-tea">
+      <h2 id="h-snow-cap-milk-tea">Snow Cap Milk Tea</h2>
+      <ul>
+        <li>
+          <article>
+            <img src="images/produk-4.svg" alt="Foto Da Hong Pao Snow Cap" width="300" height="200">
+            <h3>Da Hong Pao Snow Cap</h3>
+            <p>Snow Cap Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Da Hong Pao Snow Cap</span></a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/produk-5.svg" alt="Foto Osmanthus Oolong Snow Cap" width="300" height="200">
+            <h3>Osmanthus Oolong</h3>
+            <p>Snow Cap Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Osmanthus Oolong Snow Cap</span></a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section id="teaspresso-frappe-latte" aria-labelledby="h-teaspresso-frappe-latte">
+      <h2 id="h-teaspresso-frappe-latte">Teaspresso Frappé &amp; Latte</h2>
+      <ul>
+        <li>
+          <article>
+            <img src="images/produk-6.svg" alt="Foto Teaspresso Frappé" width="300" height="200">
+            <h3>Teaspresso Frappé</h3>
+            <p>Teaspresso Frappé &amp; Latte</p>
+            <a href="detail.html">Lihat Detail<span hidden> Teaspresso Frappé</span></a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/produk-7.svg" alt="Foto Tea Latte" width="300" height="200">
+            <h3>Tea Latte</h3>
+            <p>Teaspresso Frappé &amp; Latte</p>
+            <a href="detail.html">Lihat Detail<span hidden> Tea Latte</span></a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section id="brewed-tea" aria-labelledby="h-brewed-tea">
+      <h2 id="h-brewed-tea">Brewed Tea</h2>
+      <ul>
+        <li>
+          <article>
+            <img src="images/produk-8.svg" alt="Foto Pure Tea Original" width="300" height="200">
+            <h3>Pure Tea Original</h3>
+            <p>Brewed Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Pure Tea Original</span></a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Pagination: hanya satu halaman daftar menu pada tahap ini -->
+    <nav aria-label="Pagination">
+      <ul>
+        <li><a href="content.html" aria-current="page">1</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="cta-lokasi">
+      <h2 id="cta-lokasi">Sudah menemukan favoritmu?</h2>
+      <p>Kunjungi outlet CHAGEE terdekat untuk mencobanya.</p>
+      <a href="lokasi.html">Cari Lokasi</a>
     </section>
   </main>
 
   <footer>
-    <p>Email: info@campuslife.ac.id | Telepon: (021) 555-0123</p>
-    <p>&copy; 2026 Campus Life</p>
+    <a href="index.html"><img src="images/logo-chagee.svg" alt="CHAGEE Indonesia" width="160" height="40"></a>
+    <p>Teh premium dan budaya teh modern dari CHAGEE Indonesia.</p>
+    <nav aria-label="Navigasi footer">
+      <section>
+        <h2>Jelajahi</h2>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="content.html">Menu</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Bantuan</h2>
+        <ul>
+          <li><a href="contact.html">Kontak Layanan Pelanggan</a></li>
+          <li><a href="tentang.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+          <li><a href="tentang.html#syarat-ketentuan">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Media Sosial</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </section>
+    </nav>
+    <small>&copy; 2026 CHAGEE Indonesia</small>
   </footer>
 </body>
 </html>

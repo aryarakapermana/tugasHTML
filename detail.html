@@ -3,103 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detail Kegiatan - Campus Life</title>
+  <title>Jasmine Green Milk Tea - CHAGEE Indonesia</title>
 </head>
 <body>
   <header>
-    <h1>Campus Life</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="content.html">Kegiatan</a>
-      <a href="contact.html">Kontak</a>
+    <a href="index.html"><img src="images/logo-chagee.svg" alt="CHAGEE Indonesia - kembali ke Beranda" width="160" height="40"></a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="content.html" aria-current="page">Menu</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
     </nav>
+    <form action="content.html" method="get" role="search">
+      <label for="cari">Cari menu</label>
+      <input type="search" id="cari" name="q" placeholder="Cari menu...">
+      <button type="submit">Cari</button>
+    </form>
+    <div role="group" aria-label="Pilihan bahasa">
+      <button type="button" lang="id" aria-pressed="true">ID</button>
+      <button type="button" lang="en" aria-pressed="false">EN</button>
+    </div>
   </header>
 
   <main>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="content.html">Menu</a></li>
+        <li><a href="content.html#fresh-milk-tea">Fresh Milk Tea</a></li>
+        <li aria-current="page">Jasmine Green Milk Tea</li>
+      </ol>
+    </nav>
+
     <article>
-      <h2>Seminar Teknologi 2026</h2>
-      <img src="images/seminar.svg" alt="Ilustrasi seminar di kampus Institut Teknologi PLN (ITPLN)" width="500">
-
-      <section>
-        <h3>Deskripsi</h3>
-        <p>Seminar Teknologi 2026 membahas perkembangan kecerdasan buatan, keamanan siber, dan pengembangan web modern. Kegiatan ini terbuka untuk seluruh mahasiswa dan gratis.</p>
-      </section>
-
-      <section>
-        <h3>Video dan Audio Kegiatan</h3>
-        <video controls preload="metadata" width="640" poster="images/seminar.svg">
-          <source src="videos/video.mp4" type="video/mp4">
-          Browser Anda tidak mendukung pemutaran video.
-        </video>
-        <p>
-          <label for="audio-kegiatan">Audio kegiatan:</label><br>
-          <audio id="audio-kegiatan" controls preload="metadata">
-            <source src="audio/lagu.mp3" type="audio/mpeg">
-            Browser Anda tidak mendukung pemutaran audio.
-          </audio>
-        </p>
-      </section>
-
-      <section>
-        <h3>Jadwal Acara</h3>
-        <table border="1">
-          <caption>Rundown Seminar Teknologi 2026</caption>
-          <thead>
-            <tr>
-              <th>Waktu</th>
-              <th>Acara</th>
-              <th>Pembicara</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>08.00 - 09.00</td>
-              <td>Registrasi peserta</td>
-              <td>Panitia</td>
-            </tr>
-            <tr>
-              <td>09.00 - 10.30</td>
-              <td>Tren AI di dunia kerja</td>
-              <td>Dr. Andi Pratama</td>
-            </tr>
-            <tr>
-              <td>10.45 - 12.00</td>
-              <td>Dasar keamanan siber</td>
-              <td>Sari Wulandari, M.Kom.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section>
-        <h3>Informasi Penting</h3>
+      <section aria-label="Galeri foto produk">
+        <figure>
+          <img src="images/jasmine-utama.svg" alt="Foto utama Jasmine Green Milk Tea" width="600" height="500">
+          <figcaption>Jasmine Green Milk Tea</figcaption>
+        </figure>
         <ul>
-          <li>Tanggal: 15 November 2026</li>
-          <li>Tempat: Aula Utama Kampus</li>
-          <li>Peserta: Mahasiswa semua program studi</li>
-          <li>Biaya: Gratis</li>
+          <li><img src="images/jasmine-thumb-1.svg" alt="Thumbnail 1 Jasmine Green Milk Tea" width="150" height="110"></li>
+          <li><img src="images/jasmine-thumb-2.svg" alt="Thumbnail 2 Jasmine Green Milk Tea" width="150" height="110"></li>
+          <li><img src="images/jasmine-thumb-3.svg" alt="Thumbnail 3 Jasmine Green Milk Tea" width="150" height="110"></li>
+          <li><img src="images/jasmine-thumb-4.svg" alt="Thumbnail 4 Jasmine Green Milk Tea" width="150" height="110"></li>
         </ul>
       </section>
 
-      <section>
-        <h3>Yang Perlu Dibawa</h3>
-        <ol>
-          <li>Kartu Tanda Mahasiswa (KTM)</li>
-          <li>Laptop (opsional)</li>
-          <li>Alat tulis</li>
-        </ol>
+      <section aria-labelledby="info-produk">
+        <p>Fresh Milk Tea</p>
+        <h1 id="info-produk">Jasmine Green Milk Tea</h1>
+        <p>Teh susu dengan aroma melati yang ringan dan segar.</p>
+        <table>
+          <caption>Ringkasan produk</caption>
+          <tbody>
+            <tr><th scope="row">Basis Teh</th><td>Jasmine Green Tea</td></tr>
+            <tr><th scope="row">Profil Aroma</th><td>Floral, segar</td></tr>
+            <tr><th scope="row">Deskripsi Rasa</th><td>Ringan, manis lembut</td></tr>
+          </tbody>
+        </table>
+        <p>
+          <a href="lokasi.html">Cari Outlet Terdekat</a>
+          <a href="content.html">Kembali ke Menu</a>
+        </p>
+        <p>Tersedia di outlet CHAGEE (lihat halaman <a href="lokasi.html">Lokasi</a>).</p>
+      </section>
+
+      <section aria-labelledby="profil-rasa">
+        <h2 id="profil-rasa">Profil Rasa &amp; Aroma</h2>
+        <p>Aroma melati yang floral berpadu dengan teh hijau dan susu, menghasilkan rasa yang ringan, segar, dan manis lembut di akhir tegukan.</p>
+        <dl>
+          <dt><label for="m-manis">Manis</label></dt>
+          <dd><meter id="m-manis" min="0" max="5" value="3">3 dari 5</meter></dd>
+          <dt><label for="m-aroma">Aroma</label></dt>
+          <dd><meter id="m-aroma" min="0" max="5" value="4">4 dari 5</meter></dd>
+          <dt><label for="m-body">Body</label></dt>
+          <dd><meter id="m-body" min="0" max="5" value="2">2 dari 5</meter></dd>
+        </dl>
       </section>
     </article>
 
-    <nav>
-      <a href="content.html">Kembali ke Kegiatan</a> |
-      <a href="contact.html">Hubungi Panitia</a>
-    </nav>
+    <section aria-labelledby="menu-terkait">
+      <h2 id="menu-terkait">Menu Terkait</h2>
+      <ul>
+        <li>
+          <article>
+            <img src="images/produk-2.svg" alt="Foto Da Hong Pao Milk Tea" width="300" height="200">
+            <h3>Da Hong Pao</h3>
+            <p>Fresh Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Da Hong Pao Milk Tea</span></a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/produk-3.svg" alt="Foto Tie Guan Yin Milk Tea" width="300" height="200">
+            <h3>Tie Guan Yin</h3>
+            <p>Fresh Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Tie Guan Yin Milk Tea</span></a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/produk-5.svg" alt="Foto Osmanthus Oolong Snow Cap" width="300" height="200">
+            <h3>Osmanthus Oolong</h3>
+            <p>Snow Cap Milk Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Osmanthus Oolong Snow Cap</span></a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/produk-8.svg" alt="Foto Pure Tea Original" width="300" height="200">
+            <h3>Pure Tea Original</h3>
+            <p>Brewed Tea</p>
+            <a href="detail.html">Lihat Detail<span hidden> Pure Tea Original</span></a>
+          </article>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>Email: info@campuslife.ac.id | Telepon: (021) 555-0123</p>
-    <p>&copy; 2026 Campus Life</p>
+    <a href="index.html"><img src="images/logo-chagee.svg" alt="CHAGEE Indonesia" width="160" height="40"></a>
+    <p>Teh premium dan budaya teh modern dari CHAGEE Indonesia.</p>
+    <nav aria-label="Navigasi footer">
+      <section>
+        <h2>Jelajahi</h2>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="content.html">Menu</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Bantuan</h2>
+        <ul>
+          <li><a href="contact.html">Kontak Layanan Pelanggan</a></li>
+          <li><a href="tentang.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+          <li><a href="tentang.html#syarat-ketentuan">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Media Sosial</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </section>
+    </nav>
+    <small>&copy; 2026 CHAGEE Indonesia</small>
   </footer>
 </body>
 </html>

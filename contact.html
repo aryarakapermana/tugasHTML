@@ -3,68 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontak - Campus Life</title>
+  <title>Hubungi Kami - CHAGEE Indonesia</title>
 </head>
 <body>
   <header>
-    <h1>Campus Life</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="content.html">Kegiatan</a>
-      <a href="contact.html">Kontak</a>
+    <a href="index.html"><img src="images/logo-chagee.svg" alt="CHAGEE Indonesia - kembali ke Beranda" width="160" height="40"></a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="content.html">Menu</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
     </nav>
+    <form action="content.html" method="get" role="search">
+      <label for="cari">Cari menu</label>
+      <input type="search" id="cari" name="q" placeholder="Cari menu...">
+      <button type="submit">Cari</button>
+    </form>
+    <div role="group" aria-label="Pilihan bahasa">
+      <button type="button" lang="id" aria-pressed="true">ID</button>
+      <button type="button" lang="en" aria-pressed="false">EN</button>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Hubungi Kami</h2>
-      <p>Punya pertanyaan tentang kegiatan kampus? Silakan hubungi bagian kemahasiswaan.</p>
-    </section>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Hubungi Kami</li>
+      </ol>
+    </nav>
 
-    <section>
-      <h2>Informasi Kontak</h2>
-      <address>
-        Bagian Kemahasiswaan Campus Life<br>
-        Jl. Pendidikan No. 10, Jakarta<br>
-        Email: <a href="mailto:info@campuslife.ac.id">info@campuslife.ac.id</a><br>
-        Telepon: <a href="tel:+62215550123">(021) 555-0123</a>
-      </address>
-    </section>
+    <h1>Hubungi Kami</h1>
+    <p>Tim layanan pelanggan CHAGEE Indonesia siap membantu.</p>
 
-    <section>
-      <h2>Jam Layanan</h2>
-      <ul>
-        <li>Senin - Jumat: 08.00 - 16.00 WIB</li>
-        <li>Sabtu: 08.00 - 12.00 WIB</li>
-        <li>Minggu: Tutup</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Kirim Pesan</h2>
+    <section aria-labelledby="kirim-pesan">
+      <h2 id="kirim-pesan">Kirim Pesan</h2>
       <form action="#" method="post">
         <p>
-          <label for="nama">Nama:</label><br>
+          <label for="nama">Nama lengkap</label><br>
           <input type="text" id="nama" name="nama" required>
         </p>
         <p>
-          <label for="email">Email:</label><br>
+          <label for="email">Alamat email</label><br>
           <input type="email" id="email" name="email" required>
         </p>
         <p>
-          <label for="pesan">Pesan:</label><br>
-          <textarea id="pesan" name="pesan" rows="4" cols="40" required></textarea>
+          <label for="kategori">Kategori pesan</label><br>
+          <select id="kategori" name="kategori" required>
+            <option value="">Pilih kategori</option>
+            <option value="pertanyaan">Pertanyaan</option>
+            <option value="saran">Saran</option>
+            <option value="keluhan">Keluhan</option>
+          </select>
         </p>
-        <button type="submit">Kirim</button>
+        <p>
+          <label for="pesan">Pesan</label><br>
+          <textarea id="pesan" name="pesan" rows="5" cols="40" required></textarea>
+        </p>
+        <button type="submit">Kirim Pesan</button>
       </form>
     </section>
 
-    <p><a href="index.html">Kembali ke Home</a></p>
+    <aside aria-labelledby="layanan">
+      <h2 id="layanan">Layanan Pelanggan</h2>
+      <ul>
+        <li>Email layanan: (isi alamat email layanan)</li>
+        <li>Telepon / WhatsApp: (isi nomor layanan)</li>
+        <li>Jam layanan: (isi jam layanan)</li>
+        <li>Media sosial resmi: <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+      <figure>
+        <img src="images/peta-lokasi.svg" alt="Placeholder peta lokasi outlet CHAGEE" width="400" height="220">
+        <figcaption><a href="lokasi.html">Cari Outlet Terdekat</a></figcaption>
+      </figure>
+    </aside>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Pertanyaan Umum (FAQ)</h2>
+      <details>
+        <summary>Bagaimana cara menemukan outlet terdekat?</summary>
+        <p>Buka halaman <a href="lokasi.html">Lokasi</a>, lalu pilih kota untuk melihat daftar outlet.</p>
+      </details>
+      <details>
+        <summary>Di mana saya dapat melihat detail rasa dan bahan menu?</summary>
+        <p>Buka halaman <a href="content.html">Menu</a>, pilih produk, lalu klik Lihat Detail.</p>
+      </details>
+      <details>
+        <summary>Bagaimana menyampaikan saran atau keluhan?</summary>
+        <p>Gunakan formulir di halaman ini dan pilih kategori pesan Saran atau Keluhan.</p>
+      </details>
+    </section>
   </main>
 
   <footer>
-    <p>Email: info@campuslife.ac.id | Telepon: (021) 555-0123</p>
-    <p>&copy; 2026 Campus Life</p>
+    <a href="index.html"><img src="images/logo-chagee.svg" alt="CHAGEE Indonesia" width="160" height="40"></a>
+    <p>Teh premium dan budaya teh modern dari CHAGEE Indonesia.</p>
+    <nav aria-label="Navigasi footer">
+      <section>
+        <h2>Jelajahi</h2>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="content.html">Menu</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Bantuan</h2>
+        <ul>
+          <li><a href="contact.html">Kontak Layanan Pelanggan</a></li>
+          <li><a href="tentang.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+          <li><a href="tentang.html#syarat-ketentuan">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Media Sosial</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </section>
+    </nav>
+    <small>&copy; 2026 CHAGEE Indonesia</small>
   </footer>
 </body>
 </html>
